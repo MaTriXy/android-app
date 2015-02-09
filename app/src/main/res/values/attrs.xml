@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<resources>
+    <declare-styleable name="CustomFont">
+        <attr name="fontName" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="BookCover">
+        <attr name="showCoverText" format="boolean" />
+        <attr name="showDownloadStateIcons" format="boolean" />
+        <attr name="showLoadingIcon" format="boolean" />
+        <attr name="fadeInImage" format="boolean" />
+        <attr name="showComingSoon" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FancyCoverFlow">
+        <attr name="unselectedAlpha" format="float"/>
+        <attr name="unselectedSaturation" format="float"/>
+        <attr name="unselectedScale" format="float"/>
+        <attr name="maxRotation" format="integer"/>
+        <attr name="scaleDownGravity" format="float"/>
+        <attr name="actionDistance" format="integer">
+            <enum name="auto" value="2147483647" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="BBBEditText">
+        <attr name="state_error" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="BBBTextView">
+        <attr name="fontName" />
+        <attr name="fontNameSelected" format="string" />
+        <attr name="isLink" format="boolean" />
+    </declare-styleable>
+
+</resources>

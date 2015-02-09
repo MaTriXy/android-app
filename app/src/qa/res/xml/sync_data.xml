@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<sync-adapter xmlns:android="http://schemas.android.com/apk/res/android"
+    android:contentAuthority="com.blinkboxbooks.android.qa"
+    android:accountType="com.blinkbox.books"
+    android:userVisible="false"
+    android:syncable="true"
+    android:icon="@drawable/ic_launcher"
+    android:smallIcon="@drawable/ic_launcher"
+    android:allowParallelSyncs="false"
+    android:isAlwaysSyncable="true"
+    android:label="@string/app_name" />

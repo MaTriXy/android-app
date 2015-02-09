@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dictionary_top_level_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_dropshadow_top"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@drawable/dropshadow_top"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:paddingLeft="@dimen/dictionary_margin">
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            android:id="@+id/textview_message"
+            style="@style/TextStyle.Title1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dictionary_margin"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/layout_initialisation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextStyle.Title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/loading" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_definition"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/button_see_full_definition"
+                android:layout_alignParentTop="true" />
+
+            <com.blinkboxbooks.android.widget.BBBTextView
+                android:id="@+id/button_see_full_definition"
+                style="@style/TextStyle.Title1.Link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/gap_large"
+                android:layout_marginLeft="@dimen/gap_small"
+                android:layout_marginTop="@dimen/gap_small"
+                android:text="@string/button_see_full_definition"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_dropshadow_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/dropshadow_bottom"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/gap_medium"
+    android:descendantFocusability="blocksDescendants" >
+
+    <!-- We add the top padding to all top three components as we want extra padding on the delete button
+     so it can actually be pressed -->
+    <ImageView
+        android:id="@+id/imageview_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/gap_small"
+        android:layout_alignTop="@+id/textview_bookmark_title"
+        android:layout_marginTop="@dimen/gap_smaller"
+        android:src="@drawable/image_highlights_src"
+        android:paddingTop="@dimen/gap_medium"/>
+
+    <ImageButton
+        android:id="@+id/imagebutton_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textview_bookmark_title"
+        android:paddingTop="@dimen/gap_medium"
+        android:paddingLeft="@dimen/gap_medium"
+        android:paddingRight="@dimen/gap_small"
+        android:paddingBottom="@dimen/gap_medium"
+        android:src="@drawable/image_delete_src"
+        android:background="@null" />
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        style="@style/TextStyle.Title1"
+        android:id="@+id/textview_bookmark_title"
+        android:paddingTop="@dimen/gap_medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageview_bookmark"
+        android:layout_toLeftOf="@id/imagebutton_delete"
+        android:layout_marginBottom="@dimen/gap_small"
+        tools:text="Chapter 1"  />
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        style="@style/TextStyle.Discount"
+        android:id="@+id/textview_bookmark_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview_bookmark_title"
+        android:layout_alignLeft="@id/textview_bookmark_title"
+        android:layout_alignRight="@id/textview_bookmark_title"
+        android:layout_marginBottom="@dimen/gap_medium"
+        android:lines="1"
+        tools:text="(7% of book read)"  />
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        style="@style/TextStyle.Info"
+        android:id="@+id/textview_bookmark_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/textview_bookmark_title"
+        android:layout_alignRight="@id/textview_bookmark_title"
+        android:layout_below="@id/textview_bookmark_progress"
+        android:maxLines="4"
+        android:ellipsize="end"
+        tools:text="Lorem ipsum dolor sid amen, consectetuer adipiscing elit"  />
+</RelativeLayout>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ExportedReceiver"
+    package="com.blinkboxbooks.android" >
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- <uses-permission android:name="android.permission.CAMERA"/> -->
+
+    <application
+        tools:ignore="UnusedAttribute, InnerclassSeparator"
+        android:name="com.blinkboxbooks.android.BBBApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/BBBTheme"
+        android:restrictedAccountType="com.blinkbox.books">
+
+        <!-- Activities -->
+        <activity
+            android:name=".ui.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/SplashScreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app"
+                    android:pathPattern="/launch"
+                    android:scheme="bbb" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.library.LibraryActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/BBBTheme" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app"
+                    android:pathPattern="/library/.*"
+                    android:scheme="bbb" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.account.LoginActivity"
+            android:label="@string/sign_in"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.library.LibraryActivity"
+            android:theme="@style/BBBTheme" >
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blinkboxbooks.android.ui.library.LibraryActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app"
+                    android:pathPattern="/login/.*"
+                    android:scheme="bbb" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.reader.AnimationActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name=".ui.reader.ReaderActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.library.LibraryActivity"
+            android:theme="@style/BBBTheme" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="ACTION_TABLEOFCONTENTS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app"
+                    android:pathPattern="/reader/.*"
+                    android:scheme="bbb" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blinkboxbooks.android.ui.library.LibraryActivity" />
+        </activity>
+        <activity
+            android:name=".ui.reader.BookmarkTabActivity"
+            android:parentActivityName=".ui.reader.ReaderActivity"
+            android:label="@string/your_bookmarks_and_highlights"
+            android:theme="@style/BBBTheme" >
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blinkboxbooks.android.ui.reader.ReaderActivity" />
+        </activity>
+        <activity
+            android:name=".ui.account.RegisterActivity"
+            android:label="@string/registration"
+            android:parentActivityName=".ui.account.LoginActivity"
+            android:theme="@style/BBBTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blinkboxbooks.android.ui.account.LoginActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app"
+                    android:pathPattern="/register/.*"
+                    android:scheme="bbb" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.AboutBookActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.library.LibraryActivity"
+            android:theme="@style/BBBTheme"
+            android:label="@string/title_about_this_book">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blinkboxbooks.android.ui.library.LibraryActivity" />
+        </activity>
+        <activity
+            android:name=".ui.reader.EndOfBookActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.library.LibraryActivity"
+            android:theme="@style/BBBTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blinkboxbooks.android.ui.library.LibraryActivity" />
+        </activity>
+        <activity
+            android:name=".ui.reader.EndOfSampleActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".ui.library.LibraryActivity"
+            android:theme="@style/BBBTheme"  >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blinkboxbooks.android.ui.library.LibraryActivity" />
+        </activity>
+        <activity
+            android:name=".ui.reader.TableOfContentsActivity"
+            android:theme="@style/BBBTheme" />
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:theme="@style/BBBTheme" />
+        <activity
+            android:name=".ui.TermsAndConditionsActivity"
+            android:label="@string/title_terms_and_conditions" />
+        <activity
+            android:name=".ui.WebContentActivity"
+            android:theme="@style/BBBTheme" />
+
+        <activity
+            android:name="com.blinkboxbooks.android.ui.shop.ShopActivity"
+            android:label="@string/shop"
+            android:logo="@android:color/transparent"
+            android:parentActivityName="com.blinkboxbooks.android.ui.library.LibraryActivity"
+            android:theme="@style/BBBTheme"
+            android:launchMode="singleTop">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blinkboxbooks.android.ui.library.LibraryActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app"
+                    android:pathPattern="/shop/.*"
+                    android:scheme="bbb" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.shop.SearchActivity"
+            android:logo="@android:color/transparent"
+            android:parentActivityName="com.blinkboxbooks.android.ui.shop.ShopActivity"
+            android:theme="@style/BBBTheme"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask">
+
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.blinkboxbooks.android.ui.shop.ShopActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/shop_searchable"/>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app"
+                    android:pathPattern="/search/isbn/.*"
+                    android:scheme="bbb" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.shop.preview.PreviewActivity"
+            android:logo="@android:color/transparent"
+            android:theme="@style/BBBTheme"
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTop"/>
+
+        <!-- Content Providers -->
+        <!--See Flavor folder-->
+
+        <!-- Services -->
+        <service
+            android:name=".authentication.BBBAuthenticationService"
+            android:exported="true"
+            tools:ignore="ExportedService" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service
+            android:name=".sync.BBBSyncService"
+            android:exported="true"
+            tools:ignore="ExportedService" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_data" />
+        </service>
+
+        <!-- ADX Receiver -->
+
+        <receiver android:name="com.AdX.tag.AdXAppTracker" android:exported="true" tools:ignore="InnerclassSeparator">
+
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="APP_NAME"
+            android:value="com.blinkboxbooks.android" />
+        <meta-data
+            android:name="ADX_CLIENT_ID"
+            android:value="changeme" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="changeme"/>
+
+    </application>
+
+</manifest>

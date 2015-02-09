@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UseCompoundDrawables"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/gap_small"
+    android:paddingRight="@dimen/gap_small"
+    android:background="@drawable/menu_tap"
+    android:minHeight="@dimen/main_menu_min_item_height" >
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        style="@style/TextStyle.Body1"
+        android:id="@android:id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:textColor="@color/main_menu_textcolor"
+        android:drawablePadding="@dimen/gap_small"
+        android:ellipsize="end"
+        tools:text="Title1"/>
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        style="@style/TextStyle.Body1"
+        android:id="@android:id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@color/main_menu_textcolor"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@android:id/icon"
+        tools:text="Title2" />
+
+    <ImageView
+        android:id="@android:id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gap_smaller"
+        android:layout_marginRight="@dimen/gap_small"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_no_network" />
+
+</RelativeLayout>

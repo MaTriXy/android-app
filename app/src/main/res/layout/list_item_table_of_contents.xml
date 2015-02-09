@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+<com.blinkboxbooks.android.widget.BBBTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/TextStyle.Subhead.Link"
+    android:id="@android:id/text1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />

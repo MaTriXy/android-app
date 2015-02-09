@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/layout_reader_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white" />
+
+    <LinearLayout
+        android:id="@+id/reader_container_highlighpopup"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/highlight_bg"
+        android:alpha="0"
+        android:orientation="horizontal"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:id="@+id/reader_imageview_menu_highlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/gap_medium"
+            android:layout_gravity="center"
+            android:src="@drawable/btn_add_highlight" />
+
+        <ImageView
+            android:id="@+id/reader_imageview_menu_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/gap_medium"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:src="@drawable/btn_remove_highlight" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/reader_imageview_bookmark"
+        android:contentDescription="@string/reader_bookmark_off_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="@dimen/gap_medium"
+        android:transformPivotY="0dp"
+        android:visibility="gone"
+        android:src="@drawable/reader_bookmark_src" />
+
+    <LinearLayout
+        android:id="@+id/reader_container_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:background="@drawable/shadow_from_bottom" />
+
+        <FrameLayout
+            android:id="@+id/layout_reader_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/reader_container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            app:theme="@style/BBBActionBar.Reader" />
+
+
+        <!-- For pre-lollipop devices there is a bug where the back/overflow buttons
+             will change colour to take the main theme colours if you show another
+             activity from the reader that takes the default theme (such as table
+             of contents). So for these devices we overlay images that have the
+             correct colours -->
+         <ImageView
+             android:id="@+id/activity_reader_image_back"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:tint="@color/brand_purple"
+             android:layout_centerVertical="true"
+             android:layout_alignParentLeft="true"
+             android:layout_marginLeft="16dp"
+             android:paddingBottom="6dp"
+             android:visibility="gone"
+             android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+
+        <ImageView
+            android:id="@+id/activity_reader_image_overflow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="12dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="16dp"
+            android:background="?attr/actionBarItemBackground"
+            android:tint="@color/brand_purple"
+            android:src="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha" />
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            android:id="@+id/activity_reader_popupanchor"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/your_bookmarks_and_highlights"
+            android:visibility="invisible"
+            android:paddingRight="54dp"
+            android:paddingLeft="32dp"
+            android:layout_alignParentRight="true" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_below="@id/toolbar"
+            android:background="@drawable/shadow_from_top" />
+
+    </RelativeLayout>
+
+
+
+</merge>

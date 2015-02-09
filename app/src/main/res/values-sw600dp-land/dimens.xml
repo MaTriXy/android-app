@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="visible_carousel_books">9</integer>
+    <dimen name="register_button_width">260dp</dimen>
+    <integer name="end_of_sample_related_columns">2</integer>
+    <dimen name="coverflow_spacing">-36dp</dimen>
+</resources>

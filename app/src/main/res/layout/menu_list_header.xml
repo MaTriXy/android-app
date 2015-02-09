@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_header"
+    android:paddingLeft="@dimen/gap_small"
+    android:paddingRight="@dimen/gap_small"
+    android:minHeight="@dimen/main_menu_min_item_height" >
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        style="@style/TextStyle.Body1"
+        android:id="@android:id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|left"
+        tools:text="Title" />
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        style="@style/TextStyle.Body1"
+        android:id="@android:id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        tools:text="Text2" />
+
+</FrameLayout>

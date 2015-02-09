@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        style="@style/TextStyle.Headline"
+        android:id="@+id/textview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/gap_large"
+        android:layout_marginBottom="@dimen/gap_medium"
+        tools:text="Headline" />
+
+    <RelativeLayout
+        android:id="@+id/container_seefull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/gap_large"
+        android:layout_below="@id/textview_title"
+        android:visibility="gone">
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Info"
+            android:id="@+id/textview_seefull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/btn_arrow"
+            android:drawablePadding="@dimen/gap_small"
+            android:layout_marginTop="@dimen/gap_smaller"
+            android:layout_marginBottom="@dimen/gap_smaller"
+            android:gravity="center_vertical"
+            android:textColor="@color/brand_purple"
+            android:text="@string/see_full_list"/>
+
+        <View
+            style="@style/Divider.Horizontal"
+            android:layout_alignLeft="@id/textview_seefull"
+            android:layout_alignRight="@id/textview_seefull"
+            android:layout_alignParentTop="true" />
+
+        <View
+            style="@style/Divider.Horizontal"
+            android:layout_below="@id/textview_seefull"
+            android:layout_alignLeft="@id/textview_seefull"
+            android:layout_alignRight="@id/textview_seefull" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/container_seefull"
+        android:orientation="vertical" />
+
+    <ProgressBar
+        style="@style/ProgressBarStyle.Indeterminate"
+        android:id="@+id/progress_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

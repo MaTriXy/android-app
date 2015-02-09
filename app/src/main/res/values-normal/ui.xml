@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<resources>
+
+    <integer name="library_number_columns">2</integer>
+    <integer name="library_row_limit">1</integer>
+
+</resources>

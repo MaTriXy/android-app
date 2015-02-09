@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<resources>
+
+    <item name="font_size" format="float" type="dimen">1.125</item>
+    <item name="font_size_preview" format="float" type="dimen">0.875</item>
+    <item name="line_space" format="float" type="dimen">1.583</item>
+    <item name="margin_top" format="float" type="dimen" >9.8</item>
+    <item name="margin_bottom" format="float" type="dimen">6.5</item>
+
+</resources>

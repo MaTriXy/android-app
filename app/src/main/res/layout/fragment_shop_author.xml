@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/gap_large"
+        android:paddingTop="@dimen/gap_medium">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/gap_medium"
+            android:paddingRight="@dimen/gap_medium">
+
+            <ImageView
+                android:id="@+id/imageview_author"
+                android:layout_width="@dimen/author_image_default_width"
+                android:layout_height="@dimen/author_image_default_height"
+                android:paddingRight="@dimen/gap_smaller"
+                android:scaleType="fitStart"
+                android:src="@drawable/author_placeholder" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gap_medium"
+                android:orientation="vertical">
+
+                <com.blinkboxbooks.android.widget.BBBTextView
+                    android:id="@+id/textview_author_name"
+                    style="@style/TextStyle.Title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="This is a title" />
+
+                <com.blinkboxbooks.android.widget.BBBTextView
+                    android:id="@+id/textview_author_biography_tablet"
+                    style="@style/TextStyle.Body2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gap_medium"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            android:id="@+id/textview_author_biography_phone"
+            style="@style/TextStyle.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gap_medium"
+            android:paddingLeft="@dimen/gap_medium"
+            android:paddingRight="@dimen/gap_medium"
+            android:visibility="gone" />
+
+        <View
+            style="@style/Divider.Horizontal"
+            android:layout_margin="@dimen/gap_medium" />
+
+        <LinearLayout
+            android:id="@+id/layout_other_books"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.blinkboxbooks.android.widget.BBBTextView
+                style="@style/TextStyle.Title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/gap_large"
+                android:paddingLeft="@dimen/gap_medium"
+                android:paddingRight="@dimen/gap_medium"
+                android:text="@string/title_other_books_by_this_author" />
+
+            <LinearLayout
+                android:id="@+id/bookcontainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/gap_medium"
+                android:orientation="horizontal" />
+
+            <com.blinkboxbooks.android.widget.BBBButton
+                android:id="@+id/button_see_all_books"
+                style="@style/ButtonStyle.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/gap_medium"
+                android:paddingRight="@dimen/gap_medium"
+                android:text="@string/button_see_all_books_author" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+

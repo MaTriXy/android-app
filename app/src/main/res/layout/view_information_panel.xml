@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/view_information_panel_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/information_panel_min_height"
+    android:paddingTop="@dimen/gap_small"
+    android:paddingBottom="@dimen/gap_small">
+
+    <ImageView
+        android:id="@+id/view_information_panel_dismiss_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_close"
+        android:padding="@dimen/gap_small"
+        android:layout_marginRight="@dimen/gap_medium"/>
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        style="@style/PopUpInformation"
+        android:id="@+id/view_information_panel_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/view_information_panel_dismiss_button"
+        android:layout_marginRight="@dimen/gap_medium"
+        android:layout_marginLeft="@dimen/gap_large"/>
+
+</RelativeLayout>

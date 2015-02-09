@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true"
+            android:paddingBottom="@dimen/gap_large"
+            android:paddingLeft="@dimen/gap_medium"
+            android:paddingRight="@dimen/gap_medium">
+
+            <com.blinkboxbooks.android.widget.BBBTextView
+                style="@style/TextStyle.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_large"
+                android:layout_marginRight="@dimen/signin_padding"
+                android:layout_marginLeft="@dimen/signin_padding"
+                android:text="@string/already_with_us" />
+
+            <com.blinkboxbooks.android.widget.BBBTextView
+                android:id="@+id/textview_error_generic"
+                style="@style/TextStyle.Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_medium"
+                android:layout_marginRight="@dimen/signin_padding"
+                android:layout_marginLeft="@dimen/signin_padding"
+                android:drawableLeft="@drawable/ic_error"
+                android:drawablePadding="@dimen/gap_small"
+                android:text="@string/error_form_generic"
+                android:visibility="gone" />
+
+            <com.blinkboxbooks.android.widget.BBBTextView
+                style="@style/TextStyle.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_medium"
+                android:layout_marginBottom="@dimen/gap_small"
+                android:layout_marginRight="@dimen/signin_padding"
+                android:layout_marginLeft="@dimen/signin_padding"
+                android:text="@string/signin_login_subtext" />
+
+            <LinearLayout
+                android:id="@+id/layout_sign_in_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_medium"
+                android:layout_marginRight="@dimen/signin_padding"
+                android:layout_marginLeft="@dimen/signin_padding"
+                android:visibility="gone"
+                tools:visibility="visible" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_title_weight" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_body_weight"
+                    android:orientation="vertical">
+
+                    <com.blinkboxbooks.android.widget.BBBTextView
+                        android:id="@+id/textview_error"
+                        style="@style/TextStyle.Error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/we_cant_find_a_password" />
+
+                    <com.blinkboxbooks.android.widget.BBBTextView
+                        android:id="@+id/button_send_reset"
+                        style="@style/TextStyle.Body2.Link"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/gap_small"
+                        android:text="@string/send_reset_link"
+                        android:visibility="gone"
+                        tools:visibility="visible"  />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_small"
+                android:layout_marginRight="@dimen/signin_padding"
+                android:layout_marginLeft="@dimen/signin_padding"
+                android:orientation="horizontal" >
+
+                <com.blinkboxbooks.android.widget.BBBTextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_title_weight"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/email_address" />
+
+                <com.blinkboxbooks.android.widget.BBBAutoCompleteTextView
+                    android:id="@+id/edittext_email"
+                    style="@style/EditTextStyle"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_body_weight"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_small"
+                android:layout_marginRight="@dimen/signin_padding"
+                android:layout_marginLeft="@dimen/signin_padding"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_title_weight" />
+
+
+                <com.blinkboxbooks.android.widget.BBBSwitch
+                    android:id="@+id/switch_show_password"
+                    style="@style/TextStyle.Info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_body_weight"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/show_password" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_password_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_small"
+                android:layout_marginRight="@dimen/signin_padding"
+                android:layout_marginLeft="@dimen/signin_padding"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_title_weight" />
+
+                <com.blinkboxbooks.android.widget.BBBTextView
+                    style="@style/TextStyle.Error"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_body_weight"
+                    android:text="@string/please_enter_your_password" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_small"
+                android:layout_marginRight="@dimen/signin_padding"
+                android:layout_marginLeft="@dimen/signin_padding"
+                android:orientation="horizontal">
+
+                <com.blinkboxbooks.android.widget.BBBTextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_title_weight"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/password" />
+
+                <com.blinkboxbooks.android.widget.BBBEditText
+                    android:id="@+id/edittext_password"
+                    style="@style/EditTextStyle"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_body_weight"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_small"
+                android:layout_marginRight="@dimen/signin_padding"
+                android:layout_marginLeft="@dimen/signin_padding"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_title_weight"  />
+
+                <com.blinkboxbooks.android.widget.BBBTextView
+                    android:id="@+id/textview_forgotten_password"
+                    style="@style/TextStyle.Body2.Link"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_body_weight"
+                    android:text="@string/forgotten_your_password" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_large"
+                android:layout_marginRight="@dimen/signin_padding"
+                android:layout_marginLeft="@dimen/signin_padding"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_title_weight"  />
+
+                <com.blinkboxbooks.android.widget.BBBButton
+                    android:id="@+id/button_signin"
+                    style="@style/ButtonStyle.Primary"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_body_weight"
+                    android:contentDescription="@string/content_description_sign_in"
+                    android:text="@string/button_sign_in_to_find_book" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/Divider.Horizontal"
+                android:layout_marginTop="@dimen/gap_large" />
+
+            <com.blinkboxbooks.android.widget.BBBTextView
+                style="@style/TextStyle.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_large"
+                android:layout_marginRight="@dimen/signin_padding"
+                android:layout_marginLeft="@dimen/signin_padding"
+                android:text="@string/not_registered_yet" />
+
+            <com.blinkboxbooks.android.widget.BBBTextView
+                style="@style/TextStyle.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_medium"
+                android:layout_marginRight="@dimen/signin_padding"
+                android:layout_marginLeft="@dimen/signin_padding"
+                android:text="@string/register_now_to_read_great_books" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_large"
+                android:layout_marginRight="@dimen/signin_padding"
+                android:layout_marginLeft="@dimen/signin_padding"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_title_weight"  />
+
+                <com.blinkboxbooks.android.widget.BBBButton
+                    android:id="@+id/button_register"
+                    style="@style/ButtonStyle.Light"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/signin_body_weight"
+                    android:text="@string/button_register" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:visibility="invisible"
+        android:background="#7FFFFFFF" >
+
+        <ProgressBar
+            style="@style/ProgressBarStyle.Indeterminate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+</merge>

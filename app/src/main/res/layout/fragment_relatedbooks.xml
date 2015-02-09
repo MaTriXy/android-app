@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        style="@style/TextStyle.Title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_related_books"/>
+
+    <LinearLayout
+        android:id="@+id/bookcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        android:id="@+id/textview_error_no_books"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dip"
+        android:background="@color/text_error"
+        android:padding="16dip"
+        android:textColor="@android:color/white"
+        android:text="@string/error_no_related_books"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <com.blinkboxbooks.android.widget.BBBButton
+        style="@style/ButtonStyle.Light"
+        android:id="@+id/button_openshop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/gap_large"
+        android:text="@string/button_view_more_books_shop" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dip" />
+
+</LinearLayout>

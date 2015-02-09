@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bbb="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/alert_dialog_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/gap_large"
+    android:background="@color/dialog_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:gravity="center_vertical|start"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/gap_medium">
+
+        <ImageView
+            android:id="@+id/imageview_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/gap_small"
+            android:paddingRight="@dimen/gap_small"
+            android:visibility="gone"
+            android:src="@null" />
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Title1"
+            android:id="@+id/textview_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Body2"
+            android:id="@+id/textview_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+</LinearLayout>

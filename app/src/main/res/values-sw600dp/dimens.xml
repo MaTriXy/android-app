@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+<resources>
+
+    <dimen name="signin_padding">@dimen/gap_largest</dimen>
+    <integer name="default_reader_margin">11</integer>
+    <dimen name="rs_button_width">120dp</dimen>
+    <integer name="visible_carousel_books">5</integer>
+    <dimen name="dictionary_margin">24dp</dimen>
+    <dimen name="update_info_dialog_width">400dp</dimen>
+    <dimen name="pop_up_font_size">16sp</dimen>
+    <dimen name="register_button_width">200dp</dimen>
+    <dimen name="carousel_height">220dp</dimen>
+    <dimen name="coverflow_spacing">-24dp</dimen>
+</resources>

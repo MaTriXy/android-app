@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.reader.BookmarkTabActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        style="@style/TextStyle.Info"
+        android:id="@android:id/empty"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gap_large"
+        android:layout_marginLeft="@dimen/gap_medium"
+        android:layout_marginRight="@dimen/gap_medium"
+        android:text="@string/you_do_not_have_any_bookmarks"/>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/disabled_grey"
+        android:dividerHeight="1px"
+        android:paddingLeft="@dimen/gap_medium"
+        android:paddingRight="@dimen/gap_medium"
+        android:scrollbarStyle="outsideInset" />
+
+</FrameLayout>

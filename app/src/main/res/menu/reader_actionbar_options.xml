@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item android:id="@+id/action_add_bookmark"
+        android:title="@string/menu_item_bookmark_this_page"
+        android:icon="@drawable/btn_add_bookmark"
+        app:showAsAction="always"
+        android:orderInCategory="1"/>
+
+    <item android:id="@+id/action_remove_bookmark"
+        android:title="@string/menu_item_remove_bookmark"
+        android:icon="@drawable/btn_remove_bookmark"
+        app:showAsAction="always"
+        android:orderInCategory="1"/>
+
+    <item android:id="@+id/action_settings"
+        android:title="@string/menu_item_reader_settings"
+        android:icon="@drawable/btn_reader_settings"
+        app:showAsAction="always"
+        android:orderInCategory="2"
+        tools:ignore="AlwaysShowAction" />
+
+    <item
+        android:id="@+id/action_table_of_contents"
+        android:title="@string/menu_item_tableofcontents" />
+
+    <item
+        android:id="@+id/action_about_this_book"
+        android:title="@string/menu_item_about_this_book" />
+
+    <item
+        android:id="@+id/action_my_highlights_and_bookmarks"
+        android:title="@string/your_bookmarks_and_highlights" />
+
+    <item
+        android:id="@+id/action_gotoshop"
+        android:title="@string/menu_item_go_to_shop" />
+    <item
+        android:id="@+id/action_help"
+        android:title="@string/menu_item_help" />
+</menu>

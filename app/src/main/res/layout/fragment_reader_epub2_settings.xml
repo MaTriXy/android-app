@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:theme="@style/ReaderSettingsDialog"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/gap_large">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/button_fontsize_decrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:src="@drawable/btn_decrease_font" />
+
+            <ImageView
+                android:id="@+id/button_fontsize_increase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/btn_increase_font" />
+
+            <TextView
+                android:id="@+id/textview_fontsize"
+                style="@style/TextStyle.Title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:text="Font size: 18%" />
+        </FrameLayout>
+
+        <Spinner
+            android:id="@+id/spinner_font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gap_large" />
+
+        <SeekBar
+            android:id="@+id/seekbar_brightness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gap_large"
+            android:progressDrawable="@drawable/seekbar_progress"
+            android:thumb="@drawable/ic_brightness_normal"
+            tools:progress="50" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gap_large" >
+
+            <com.blinkboxbooks.android.widget.BBBButton
+                android:id="@+id/button_white"
+                android:textColor="@color/all_text_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rs_background_light"
+                android:minWidth="@dimen/rs_button_width"
+                android:background="@drawable/btn_light" />
+
+            <com.blinkboxbooks.android.widget.BBBButton
+                android:id="@+id/button_sepia"
+                android:textColor="@color/all_text_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gap_large"
+                android:layout_marginRight="@dimen/gap_large"
+                android:text="@string/rs_background_sepia"
+                android:minWidth="@dimen/rs_button_width"
+                android:background="@drawable/btn_sepia" />
+
+            <com.blinkboxbooks.android.widget.BBBButton
+                android:id="@+id/button_black"
+                android:textColor="@color/disable_button_outline_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rs_background_dark"
+                android:minWidth="@dimen/rs_button_width"
+                android:background="@drawable/btn_dark" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gap_large" >
+
+        <ImageButton
+            android:id="@+id/button_line_space1"
+            style="@style/ReaderSettingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_linespace_tight" />
+
+        <ImageButton
+            android:id="@+id/button_line_space2"
+            style="@style/ReaderSettingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/gap_large"
+            android:layout_marginRight="@dimen/gap_large"
+            android:src="@drawable/btn_linespace_default" />
+
+        <ImageButton
+            android:id="@+id/button_line_space3"
+            style="@style/ReaderSettingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_linespace_loose" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gap_large" >
+
+        <ImageButton
+            android:id="@+id/button_left_aligned"
+            style="@style/ReaderSettingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_left_aligned" />
+
+        <ImageButton
+            android:id="@+id/button_justified"
+            style="@style/ReaderSettingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/gap_large"
+            android:layout_marginRight="@dimen/gap_large"
+            android:src="@drawable/btn_justified" />
+
+        <ImageButton
+            style="@style/ReaderSettingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/btn_justified" />
+
+        </LinearLayout>
+
+        <com.blinkboxbooks.android.widget.BBBSwitch
+            android:id="@+id/switch_styling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gap_large"
+            android:layout_gravity="right"
+            android:text="@string/enhanced_styling"/>
+
+    </LinearLayout>
+</ScrollView>

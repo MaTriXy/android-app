@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
+
+   <!-- Add update info here wherever their is significant update information available for a new version.
+        The update info should be declared as a string-array with name="update_info_X_Y_Z" in order to be picked
+        up automatically by the update info code -->
+
+  <!-- We currently will only use the latest version update information, so technically we could delete the old version
+       info each time we have no update info, but it is recommended to keep it here just in case we ever decide to display
+       full version history info in the future -->
+
+    <!-- FOR CLARITY PLEASE KEEP THE FOLLOWING IN VERSION NUMBER ORDER WITH THE OLDEST VERSION AT THE TOP AND THE NEWEST VERSION AT THE BOTTOM -->
+    <string-array name="update_info_3_1_0">
+        <item>New library! Sort by title, recently purchased &amp; recently read.</item>
+        <item>Ebooks you are currently reading are now faster to access.</item>
+    </string-array>
+
+</resources>

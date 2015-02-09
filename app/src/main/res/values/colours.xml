@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. --><resources>
+
+    <color name="status_bar">#520e57</color>
+    <color name="brand_purple">#66116D</color>
+    <color name="hit_state_purple">#873586</color>
+    <color name="button_outline_grey">#CCCCCC</color>
+    <color name="disable_button_outline_grey">#F3F3F3</color>
+    <color name="all_text_grey">#333333</color>
+    <color name="disabled_grey">#707070</color>
+    <color name="hit_state_grey">#EEEEEE</color>
+    <color name="message_banner_blue">#177DB6</color>
+    <color name="text_error">#CC0000</color>
+    <color name="dialog_background">#FAFAFA</color>
+    <color name="selectable_item_background_pressed">#2EAAAAAA</color>
+    <color name="tab_pressed">#22888888</color>
+    <color name="brand_purple_halfalpha">#7F66116D</color>
+    <color name="highlights_carousel_background">#EFEFEF</color>
+    <color name="book_background">#F4F4F4</color>
+    <color name="book_cover_badge_border">#ECECEC</color>
+
+    <!-- all below should be removed -->
+    <color name="grey_header">#D6D6D6</color>
+    <color name="light_grey">#F7F5F2</color>
+    <color name="secondary_colour">#EE0079</color>
+    <color name="progress_grey">#D4D4D4</color>
+    <color name="reader_sepia">#E9E0CF</color>
+
+</resources>

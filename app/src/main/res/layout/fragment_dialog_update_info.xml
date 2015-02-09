@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/gap_large"
+    android:orientation="vertical">
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        style="@style/TextStyle.Title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="@string/update_info_title"
+        android:layout_marginBottom="@dimen/gap_medium" />
+
+    <com.blinkboxbooks.android.widget.BBBTextView
+        style="@style/TextStyle.Title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="@string/update_info_whats_changed"
+        android:layout_marginBottom="@dimen/gap_medium" />
+
+    <ListView
+        android:id="@+id/fragment_dialog_update_info_list"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_marginBottom="@dimen/gap_small"/>
+
+    <com.blinkboxbooks.android.widget.BBBButton
+        style="@style/ButtonStyle.Light"
+        android:id="@+id/button_update_info_close"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/update_info_ok_button"/>
+
+</LinearLayout>

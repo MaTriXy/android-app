@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<lint>
+    <issue id="TypographyDashes">
+        <ignore path="src/main/res/values/com_crashlytics_export_strings.xml"/>
+    </issue>
+
+    <issue id="UnusedResources">
+        <ignore path="src/main/res/values/com_crashlytics_export_strings.xml"/>
+    </issue>
+
+	<issue id="ContentDescription" severity="ignore"/>
+	<issue id="IconColors" severity="ignore"/>
+    <issue id="IconMissingDensityFolder" severity="ignore"/>
+    <issue id="IconLauncherShape" severity="ignore"/>
+
+    <!-- internationalization checks - we do not need as we only support english - or left to right text -->
+    <issue id="RtlHardcoded" severity="ignore"/>
+    <issue id="RtlSymmetry" severity="ignore"/>
+    <issue id="RtlEnabled" severity="ignore"/>
+    <issue id="RelativeOverlap" severity="ignore"/>
+</lint>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+<resources>
+    <string name="you_purchased_this_book">"You purchased this book\non %s"</string>
+    <string name="purchase_dialog_s_clubcard_points"><em>%1$s</em> Clubcard points</string>
+    <string name="you_purchased_this_book_about">"You purchased this book on %s"</string>
+</resources>

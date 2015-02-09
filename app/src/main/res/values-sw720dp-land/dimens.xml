@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+<resources>
+    <dimen name="carousel_height">330dp</dimen>
+    <dimen name="coverflow_spacing">-54dp</dimen>
+</resources>

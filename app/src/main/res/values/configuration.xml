@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes,InconsistentArrays">
+
+    <!--QA config-->
+    <bool name="strictMode">true</bool>
+
+    <string name="base_web_url">https://www.web_url</string>
+    <string name="support_url">https://support.server/</string>
+
+    <string name="rest_server_host">https://api.service</string>
+
+    <string name="cpr_version">1.0.14-80</string>
+
+    <string name="auth_server_host">https://auth.server</string>
+    <string name="braintree_key">changeme</string>
+
+    <!-- Must use unescaped '-' character, otherwise tracking will not work -->
+    <string name="google_analytics_key">changeme</string>
+
+    <!-- webviews will only open links on these domains. all other links will be opened in an external browser. does not apply to the initial page loaded into a weview -->
+    <string-array name="domain_locks">
+        <item>qa.server</item>
+    </string-array>
+
+    <!-- // Upgrade Information Json file URL -->
+    <string name="upgrade_information_url">https://server/forced_upgrade/upgrade.json</string>
+</resources>

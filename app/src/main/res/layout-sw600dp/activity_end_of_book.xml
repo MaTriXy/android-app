@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bbb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:paddingLeft="@dimen/gap_medium"
+        android:paddingRight="@dimen/gap_medium"
+        android:paddingBottom="@dimen/gap_medium"
+        android:paddingTop="@dimen/gap_small"
+        android:orientation="vertical">
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_end_of_book" />
+
+        <fragment
+            android:id="@+id/fragment_relatedbooks"
+            class="com.blinkboxbooks.android.ui.RelatedBooksFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_relatedbooks"
+            android:layout_marginTop="@dimen/gap_large"/>
+
+    </LinearLayout>
+
+</merge>

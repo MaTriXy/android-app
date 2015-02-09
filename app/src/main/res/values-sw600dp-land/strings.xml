@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+<resources>
+    <string name="you_purchased_this_book_about">"You purchased this book\non %s"</string>
+</resources>

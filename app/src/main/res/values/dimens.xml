@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+<resources>
+    <dimen name="gap_largest">96dp</dimen>
+    <dimen name="gap_larger">48dp</dimen>
+    <dimen name="gap_large">24dp</dimen>
+    <dimen name="gap_medium">16dp</dimen>
+    <dimen name="gap_small">8dp</dimen>
+    <dimen name="gap_smaller">4dp</dimen>
+
+    <dimen name="update_info_dialog_width">340dp</dimen>
+    <integer name="default_reader_margin">4</integer>
+
+    <integer name="visible_carousel_books">3</integer>
+
+    <dimen name="text_size_buttons">18sp</dimen>
+
+    <dimen name="main_menu_min_item_height">45dp</dimen>
+
+    <dimen name="rs_button_width">60dp</dimen>
+
+    <dimen name="signin_padding">0dp</dimen>
+    <integer name="signin_title_weight">1</integer>
+    <integer name="signin_body_weight">2</integer>
+
+    <dimen name="author_image_default_width">104dp</dimen>
+    <dimen name="author_image_default_height">140dp</dimen>
+
+    <dimen name="fragment_bookcover_width">106dp</dimen>
+    <dimen name="fragment_bookcover_height">156dp</dimen>
+
+    <dimen name="reader_minimum_swipe_distance">100dp</dimen>
+
+    <dimen name="large_font_size">20sp</dimen>
+
+    <!-- This is intentionally sp because the dictionary panel size will scale with the size of the text -->
+    <dimen name="dictionary_initial_height">200sp</dimen>
+    <dimen name="dictionary_margin">12dp</dimen>
+
+    <dimen name="book_position_frame_width">1dp</dimen>
+    <dimen name="sort_options_dialog_width">300dp</dimen>
+    <dimen name="information_panel_min_height">70dp</dimen>
+    <dimen name="coverflow_spacing">-18dp</dimen>
+    <dimen name="pop_up_font_size">15sp</dimen>
+
+    <integer name="end_of_sample_related_columns">3</integer>
+    <dimen name="carousel_height">200dp</dimen>
+</resources>

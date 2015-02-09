@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<resources>
+
+    <!-- Tracking ID -->
+    <string name="ga_trackingId">UA-43984684-3</string>
+
+    <!--Dispatch period for EasyTracker-->
+    <integer name="ga_dispatchPeriod">43200</integer>
+
+</resources>

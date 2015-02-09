@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/background_touch_view">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey" >
+
+        <ProgressBar
+            style="@style/ProgressBarStyle.Indeterminate"
+            android:id="@+id/progress_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <com.blinkboxbooks.android.ui.reader.epub2.EPub2ReaderWebView
+        android:id="@+id/webview_reader"
+        android:alwaysDrawnWithCache="true"
+        android:visibility="invisible"
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_go_to_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:layout_gravity="bottom|left"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:padding="@dimen/gap_medium" >
+
+        <Button
+            style="@style/ButtonStyle.Light"
+            android:id="@+id/button_go_to_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/gap_small"
+            android:drawableLeft="@drawable/btn_goback_normal"
+            android:text="@string/button_back_to_your_saved_position" />
+
+        <Button
+            style="@style/ButtonStyle.Primary"
+            android:id="@+id/button_dismiss_go_to_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_dismiss" />
+    </LinearLayout>
+
+    <ProgressBar
+        style="@style/ProgressBarStyle.Indeterminate"
+        android:id="@+id/full_screen_image_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:visibility="gone"/>
+
+    <it.sephiroth.android.library.imagezoom.ImageViewTouch
+        android:background="#CF000000"
+        android:id="@+id/imageview_full_screen_image"
+        android:contentDescription="@string/reader_full_screen_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</FrameLayout>

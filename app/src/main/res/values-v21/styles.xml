@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Application theme. -->
+    <style name="BBBBaseTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/brand_purple</item>
+        <item name="colorPrimaryDark">@color/status_bar</item>
+        <item name="colorAccent">@color/brand_purple</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+    </style>
+
+    <style name="BBBBaseDialogTheme" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/brand_purple</item>
+        <item name="colorPrimaryDark">@color/status_bar</item>
+        <item name="colorAccent">@color/brand_purple</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+
+        <!-- default styles for our widgets -->
+        <item name="android:textViewStyle">@style/TextStyle.Body1</item>
+        <item name="android:buttonStyle">@style/ButtonStyle.Primary</item>
+        <item name="android:checkboxStyle">@style/CheckBoxStyle</item>
+        <item name="android:editTextStyle">@style/EditTextStyle</item>
+        <item name="android:progressBarStyle">@style/ProgressBarStyle</item>
+        <item name="android:seekBarStyle">@style/SeekBarStyle</item>
+        <item name="actionModeBackground">@color/brand_purple</item>
+    </style>
+
+    <style name="BBBActionBar.Reader" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorPrimary">@color/brand_purple</item>
+        <item name="colorPrimaryDark">@color/hit_state_purple</item>
+        <item name="colorAccent">@color/brand_purple</item>
+
+        <!-- style the text title/subtitle/hamburger icon, search view (icons/underline) and search suggestions titles -->
+        <item name="android:textColorPrimary">@color/brand_purple</item>
+        <!-- style the search suggestions subtitle -->
+        <!--<item name="android:textColorSecondary">#7FFFFFFF</item>-->
+        <!-- style the menu option text (e.g. 'Sort' 'Shop' in library toolbar -->
+        <item name="actionMenuTextColor">@color/brand_purple</item>
+        <!-- style the search view -->
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="actionModeBackground">@drawable/reader_actionbar_background</item>
+        <item name="actionModeCloseButtonStyle">@style/ReaderCloseButtonStyle</item>
+    </style>
+
+
+    <!-- base widget styles - all widget style should inherit from these as they will
+        inherit from the correct OS parent (android:Widget.Holo.x for 4.0 or android:Widget.Material)
+        and override the default styles where appropriate -->
+
+    <style name="BaseTextStyle" parent="android:Widget.Material.TextView"/>
+    <style name="BaseButtonStyle" parent="android:Widget.Material.Button">
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="BaseCheckBoxStyle" parent="android:Widget.Material.CompoundButton.CheckBox"/>
+    <style name="BaseEditTextStyle" parent="android:Widget.Material.EditText"/>
+    <style name="BaseSeekBarStyle" parent="android:Widget.Material.SeekBar"/>
+    <style name="BaseProgressBarStyle" parent="android:Widget.Material.ProgressBar"/>
+
+
+    <!-- We inherit from Holo here for AlertDialogs rather than BBBBaseDialogTheme as the width of
+    the dialogs fills the screen - which we don't want. -->
+    <style name="AlertDialog"  parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="colorPrimary">@color/brand_purple</item>
+        <item name="colorPrimaryDark">@color/status_bar</item>
+        <item name="colorAccent">@color/brand_purple</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:borderlessButtonStyle">@style/ButtonStyle.Primary.AlertDialog</item>
+        <item name="android:buttonBarStyle">@style/ButtonBar</item>
+        <item name="android:dividerHorizontal">@null</item>
+        <item name="android:minWidth" type="dimen">400dp</item>
+
+        <!-- default styles for our widgets -->
+        <item name="android:textViewStyle">@style/TextStyle.Body1</item>
+        <item name="android:buttonStyle">@style/ButtonStyle.Primary</item>
+        <item name="android:checkboxStyle">@style/CheckBoxStyle</item>
+        <item name="android:editTextStyle">@style/EditTextStyle</item>
+        <item name="android:progressBarStyle">@style/ProgressBarStyle</item>
+        <item name="android:seekBarStyle">@style/SeekBarStyle</item>
+        <item name="actionModeBackground">@color/brand_purple</item>
+    </style>
+</resources>

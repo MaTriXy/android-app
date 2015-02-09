@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes,InconsistentArrays">
+
+    <!--// we disable the strict mode on product version-->
+    <bool name="strictMode">false</bool>
+
+    <!--//Shop base url-->
+    <string name="base_web_url">https://www.web_url</string>
+    <string name="support_url">https://support.server/</string>
+
+    <!-- // Upgrade Information Json file URL -->
+    <string name="upgrade_information_url">https://server/forced_upgrade/upgrade.json</string>
+
+    <!--// API server domain-->
+    <string name="rest_server_host">https://api.server/service</string>
+
+    <string name="cpr_version">1.0.14-80</string>
+
+    <!--// authentication server domain-->
+    <string name="auth_server_host">https://auth.server</string>
+    <string name="braintree_key">changem</string>
+
+    <!-- Must use unescaped '-' character, otherwise tracking will not work -->
+    <string name="google_analytics_key">changem</string>
+
+    <!-- webviews will only open links on these domains. all other links will be opened in an external browser. does not apply to the initial page loaded into a webview -->
+    <string-array name="domain_locks">
+        <item>changeme</item>
+    </string-array>
+</resources>

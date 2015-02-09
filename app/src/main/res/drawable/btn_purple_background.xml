@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="@integer/state_transition_duration"
+    android:exitFadeDuration="@integer/state_transition_duration" >
+    <item android:state_enabled="false" android:drawable="@drawable/btn_purple_disabled" />
+    <item android:state_pressed="true" android:drawable="@drawable/btn_purple_pressed" />
+    <item android:drawable="@drawable/btn_purple_normal" />
+</selector>

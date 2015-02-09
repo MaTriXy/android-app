@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<main_menu>
+
+    <item
+        title="@string/s_library"
+        header="true" />
+
+    <item
+        actionUri="bbb://app/library/currently_reading"
+        drawable="@drawable/ic_menu_device"
+        isDependentOnNetwork="false"
+        isVisibleSignedOut="false"
+        title="@string/currently_reading" />
+
+    <item
+        actionUri="bbb://app/library/my_library"
+        drawable="@drawable/ic_menu_myaccount"
+        isDependentOnNetwork="false"
+        isVisibleSignedOut="false"
+        title="@string/my_library_lower_l" />
+
+    <item
+        actionUri="bbb://app/library/force_refresh"
+        drawable="@drawable/ic_menu_refresh"
+        isDependentOnNetwork="true"
+        isVisibleSignedOut="false"
+        title="@string/refresh_your_library" />
+
+    <item
+        actionUri="bbb://app/register/"
+        drawable="@drawable/ic_menu_myaccount"
+        isVisibleSignedIn="false"
+        isVisibleSignedOut="true"
+        title="@string/register" />
+
+    <item
+        actionUri="bbb://app/login/"
+        drawable="@drawable/ic_menu_signin"
+        isVisibleSignedIn="false"
+        isVisibleSignedOut="true"
+        title="@string/sign_in" />
+
+    <item
+        actionUri="bbb://app/login/logout"
+        drawable="@drawable/ic_menu_signout"
+        isVisibleSignedIn="true"
+        isVisibleSignedOut="false"
+        title="@string/sign_out" />
+
+    <item
+        tag="Shop"
+        title="@string/shop"
+        header="true"
+        additional=""/>
+
+    <item
+        actionUri="bbb://urimanager/shop"
+        drawable="@drawable/ic_menu_shop"
+        title="@string/shop_for_more_books" />
+
+    <item
+        title="@string/help"
+        header="true" />
+
+    <item
+        actionUri="bbb://app/library/help"
+        drawable="@drawable/ic_menu_faqs"
+        title="@string/frequently_asked_questions" />
+
+    <item
+        actionUri="bbb://urimanager/contact"
+        drawable="@drawable/ic_menu_contactus"
+        title="@string/contact_us" />
+
+    <item
+        actionUri="bbb://urimanager/about"
+        drawable="@drawable/ic_menu_about"
+        title="@string/info" />
+
+</main_menu>

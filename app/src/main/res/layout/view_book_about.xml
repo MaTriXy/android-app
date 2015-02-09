@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bbb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="0dip"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <com.blinkboxbooks.android.widget.BookCover
+        android:id="@+id/bookcover"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.73"
+        bbb:showCoverText="true"
+        bbb:showLoadingIcon="true"
+        bbb:showDownloadStateIcons="false" />
+
+    <LinearLayout
+        android:id="@+id/container_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginTop="4dip"
+            android:gravity="center_horizontal"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/textview_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dip"
+            android:textColor="#666666"
+            android:gravity="center_horizontal"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+</LinearLayout>

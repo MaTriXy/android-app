@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:enterFadeDuration="@integer/state_transition_duration" android:exitFadeDuration="@integer/state_transition_duration">
+    <item android:drawable="@color/brand_purple" android:state_pressed="true" />
+    <item android:drawable="@android:color/transparent" />
+</selector>

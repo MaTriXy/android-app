@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bbb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/gap_large">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_bookcover_height" >
+
+        <com.blinkboxbooks.android.widget.BookCover
+            android:id="@+id/bookcover"
+            android:layout_width="@dimen/fragment_bookcover_width"
+            android:layout_height="@dimen/fragment_bookcover_height"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/gap_medium"
+            bbb:showCoverText="false" />
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Title1"
+            android:id="@+id/textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bookcover"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Body2"
+            android:id="@+id/textview_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bookcover"
+            android:layout_below="@+id/textview_title"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Discount"
+            android:id="@+id/textview_price_original"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_above="@+id/textview_price"/>
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Body1"
+            android:id="@+id/textview_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Info"
+            android:id="@+id/textview_clubcard_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bookcover"
+            android:layout_above="@+id/tesco_clubcard_image"
+            android:ellipsize="end"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/gap_small"/>
+
+        <ImageView
+            android:id="@+id/tesco_clubcard_image"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tesco_clubcard"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/bookcover"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/Divider.Horizontal"
+        android:layout_marginTop="@dimen/gap_medium"
+        android:layout_marginBottom="@dimen/gap_small" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/credit_on_account" />
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Body2"
+            android:id="@+id/textview_current_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/Divider.Horizontal"
+        android:layout_marginTop="@dimen/gap_small"
+        android:layout_marginBottom="@dimen/gap_small" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/credit_to_use" />
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Body2"
+            android:id="@+id/textview_credit_to_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/Divider.Horizontal"
+        android:layout_marginTop="@dimen/gap_small"
+        android:layout_marginBottom="@dimen/gap_small" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/credit_remaining_after_purchase" />
+
+        <com.blinkboxbooks.android.widget.BBBTextView
+            style="@style/TextStyle.Body2"
+            android:id="@+id/textview_credit_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/Divider.Horizontal"
+        android:layout_marginTop="@dimen/gap_small"
+        android:layout_marginBottom="@dimen/gap_medium" />
+
+    <com.blinkboxbooks.android.widget.BBBButton
+        style="@style/ButtonStyle.Primary"
+        android:id="@+id/button_pay_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="@string/button_pay_now" />
+
+</LinearLayout>

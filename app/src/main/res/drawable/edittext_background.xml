@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bbb="http://schemas.android.com/apk/res-auto"
+    android:enterFadeDuration="@integer/state_transition_duration"
+    android:exitFadeDuration="@integer/state_transition_duration" >
+
+    <item android:drawable="@drawable/edittext_background_error" bbb:state_error="true" />
+    <item android:drawable="@drawable/edittext_background_focus" android:state_focused="true" />
+    <item android:drawable="@drawable/edittext_background_disabled" android:state_enabled="false" />
+    <item android:drawable="@drawable/edittext_background_normal" />
+
+</selector>

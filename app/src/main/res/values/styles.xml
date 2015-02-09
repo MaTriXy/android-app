@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 blinkbox Entertainment Limited. All rights reserved. -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by BBBBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="BBBBaseTheme" parent="Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+        <item name="colorPrimary">@color/brand_purple</item>
+        <item name="colorPrimaryDark">@color/status_bar</item>
+        <item name="colorAccent">@color/brand_purple</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="selectableItemBackground">@drawable/selectable_item_background</item>
+    </style>
+
+    <style name="BBBBaseDialogTheme" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="colorPrimary">@color/brand_purple</item>
+        <item name="colorPrimaryDark">@color/status_bar</item>
+        <item name="colorAccent">@color/brand_purple</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+
+        <!-- default styles for our widgets -->
+        <item name="android:textViewStyle">@style/TextStyle.Body1</item>
+        <item name="android:buttonStyle">@style/ButtonStyle.Primary</item>
+        <item name="android:checkboxStyle">@style/CheckBoxStyle</item>
+        <item name="android:editTextStyle">@style/EditTextStyle</item>
+        <item name="android:progressBarStyle">@style/ProgressBarStyle</item>
+        <item name="android:seekBarStyle">@style/SeekBarStyle</item>
+        <item name="actionModeBackground">@color/brand_purple</item>
+    </style>
+
+    <style name="BBBTheme" parent="BBBBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!--<item name="android:actionBarStyle">@style/ActionBar.BlinkBox</item>-->
+        <!--<item name="android:windowBackground">@android:color/white</item>-->
+        <item name="android:textColorLink">@color/brand_purple</item>
+
+        <!-- default styles for our widgets -->
+        <item name="android:textViewStyle">@style/TextStyle.Body1</item>
+        <item name="android:buttonStyle">@style/ButtonStyle.Primary</item>
+        <item name="android:checkboxStyle">@style/CheckBoxStyle</item>
+        <item name="android:editTextStyle">@style/EditTextStyle</item>
+        <item name="android:progressBarStyle">@style/ProgressBarStyle</item>
+        <item name="android:seekBarStyle">@style/SeekBarStyle</item>
+        <item name="actionModeBackground">@color/brand_purple</item>
+    </style>
+
+    <style name="BBBActionBar" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorPrimary">@color/brand_purple</item>
+        <item name="colorPrimaryDark">@color/hit_state_purple</item>
+        <item name="colorAccent">@android:color/white</item>
+
+        <!-- style the text title/subtitle/hamburger icon, search view (icons/underline) and search suggestions titles -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!-- style the search suggestions subtitle -->
+        <item name="android:textColorSecondary">#7FFFFFFF</item>
+        <!-- style the menu option text (e.g. 'Sort' 'Shop' in library toolbar -->
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <!-- style the search view -->
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="android:textColorHint">#7FFFFFFF</item>
+    </style>
+
+    <style name="BBBActionBar.Reader" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorPrimary">@color/brand_purple</item>
+        <item name="colorPrimaryDark">@color/hit_state_purple</item>
+        <item name="colorAccent">@color/brand_purple</item>
+
+        <!-- style the text title/subtitle/hamburger icon, search view (icons/underline) and search suggestions titles -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!-- style the search suggestions subtitle -->
+        <!--<item name="android:textColorSecondary">#7FFFFFFF</item>-->
+        <!-- style the menu option text (e.g. 'Sort' 'Shop' in library toolbar -->
+        <item name="actionMenuTextColor">@color/brand_purple</item>
+        <!-- style the search view -->
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <!--<item name="android:textColorHint">#7FFFFFFF</item>-->
+        <item name="actionModeBackground">@drawable/reader_actionbar_background</item>
+        <item name="actionModeCloseButtonStyle">@style/ReaderCloseButtonStyle</item>
+    </style>
+
+    <style name="ReaderCloseButtonStyle">
+        <item name="android:tint">@color/brand_purple</item>
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
+
+    <!-- base widget styles - all widget style should inherit from these as they will
+        inherit from the correct OS parent (android:Widget.Holo.x for 4.0 or android:Widget.Material)
+        and override the default styles where appropriate -->
+
+    <style name="BaseTextStyle" parent="android:Widget.Holo.TextView"/>
+    <style name="BaseButtonStyle" parent="android:Widget.Holo.Button"/>
+    <style name="BaseCheckBoxStyle" parent="android:Widget.Holo.CompoundButton.CheckBox"/>
+    <style name="BaseEditTextStyle" parent="android:Widget.Holo.EditText"/>
+    <style name="BaseSeekBarStyle" parent="android:Widget.Holo.SeekBar">
+        <item name="android:thumb">@drawable/seekbar_thumb</item>
+        <item name="android:progressDrawable">@drawable/seekbar_progress</item>
+    </style>
+    <style name="BaseProgressBarStyle" parent="android:Widget.Holo.ProgressBar"/>
+
+    <!-- widget styles - all widgets should be declared here (and in v21) and all subsequent
+    styles for that widget should inherit directly from these -->
+    <style name="TextStyle" parent="BaseTextStyle">
+        <item name="android:textColor">@color/all_text_grey</item>
+    </style>
+
+    <style name="ButtonStyle" parent="BaseButtonStyle">
+        <item name="fontName">@string/font_lola_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <style name="CheckBoxStyle" parent="BaseCheckBoxStyle">
+        <item name="android:textColor">@color/all_text_grey</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontName">@string/font_roboto_regular</item>
+    </style>
+
+    <style name="EditTextStyle" parent="BaseEditTextStyle">
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:textColor">@color/all_text_grey</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">8dp</item>
+        <item name="fontName">@string/font_roboto_medium</item>
+    </style>
+
+    <style name="SeekBarStyle" parent="BaseSeekBarStyle"/>
+
+    <style name="ProgressBarStyle" parent="BaseProgressBarStyle"/>
+
+    <!-- widget styles -->
+    <style name="TextStyle.Headline">
+        <item name="android:textSize">28sp</item>
+        <item name="fontName">@string/font_lola_regular</item>
+    </style>
+
+    <style name="TextStyle.BookCoverTitle">
+        <item name="android:textSize">22sp</item>
+        <item name="fontName">@string/font_lola_regular</item>
+    </style>
+
+    <style name="TextStyle.BookCoverAuthor">
+        <item name="android:textSize">18sp</item>
+        <item name="fontName">@string/font_lola_regular</item>
+    </style>
+
+    <style name="TextStyle.Title1">
+        <item name="android:textSize">20sp</item>
+        <item name="fontName">@string/font_roboto_medium</item>
+    </style>
+
+    <style name="TextStyle.Title1.Large">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="TextStyle.Title2">
+        <item name="android:textSize">20sp</item>
+        <item name="fontName">@string/font_roboto_regular</item>
+    </style>
+
+    <style name="TextStyle.Title1.Link">
+        <item name="android:textColor">@color/brand_purple</item>
+        <item name="isLink">true</item>
+    </style>
+
+    <style name="TextStyle.Title2.Link">
+        <item name="android:textColor">@color/brand_purple</item>
+        <item name="isLink">true</item>
+    </style>
+
+    <style name="TextStyle.Subhead">
+        <item name="android:textSize">18sp</item>
+        <item name="fontName">@string/font_roboto_regular</item>
+    </style>
+
+    <style name="TextStyle.Subhead.Link">
+        <item name="android:textColor">@color/brand_purple</item>
+        <item name="isLink">true</item>
+    </style>
+
+    <style name="TextStyle.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="fontName">@string/font_roboto_medium</item>
+    </style>
+
+    <style name="TextStyle.Body2">
+        <item name="android:textSize">16sp</item>
+        <item name="fontName">@string/font_roboto_regular</item>
+    </style>
+
+    <style name="TextStyle.Body2.Link">
+        <item name="android:textColor">@color/brand_purple</item>
+        <item name="isLink">true</item>
+    </style>
+
+    <style name="TextStyle.Info">
+        <item name="android:textSize">14sp</item>
+        <item name="fontName">@string/font_roboto_regular</item>
+    </style>
+
+    <style name="TextStyle.Info.Light">
+        <item name="android:textColor">@color/disabled_grey</item>
+    </style>
+
+    <style name="TextStyle.CreditCard">
+        <item name="android:textColor">@color/brand_purple</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontName">@string/font_roboto_regular</item>
+    </style>
+
+    <style name="TextStyle.Discount">
+        <item name="android:textSize">14sp</item>
+        <item name="fontName">@string/font_roboto_regular</item>
+        <item name="android:textColor">@color/disabled_grey</item>
+    </style>
+
+    <style name="TextStyle.Error">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_error</item>
+        <item name="fontName">@string/font_roboto_medium</item>
+    </style>
+
+    <style name="TextStyle.Tab">
+        <item name="android:textSize">18sp</item>
+        <item name="fontName">@string/font_roboto_regular</item>
+        <item name="fontNameSelected">@string/font_roboto_medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lines">1</item>
+        <item name="android:background">@drawable/tab_background</item>
+        <item name="android:padding">@dimen/gap_medium</item>
+    </style>
+
+    <style name="ButtonStyle.Primary">
+        <item name="android:background">@drawable/btn_purple_background</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ButtonStyle.Light">
+        <item name="android:background">@drawable/btn_grey_background</item>
+        <item name="android:textColor">@color/btn_grey_textcolor</item>
+    </style>
+
+    <style name="ButtonStyle.Buy">
+        <item name="android:background">@drawable/btn_purple_circle</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:text">@string/button_buy_capital</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="ButtonStyle.Buy.Large">
+        <item name="android:textSize">20sp</item>
+        <item name="fontName">@string/font_roboto_medium</item>
+    </style>
+
+    <style name="ProgressBarStyle.Indeterminate">
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:indeterminateDrawable">@drawable/progressbar_loading</item>
+        <item name="android:indeterminateOnly">true</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:background">@color/button_outline_grey</item>
+    </style>
+
+    <style name="Divider.Vertical">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="Divider.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="AlertDialog" parent="BBBBaseDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:borderlessButtonStyle">@style/ButtonStyle.Primary.AlertDialog</item>
+        <item name="android:buttonBarStyle">@style/ButtonBar</item>
+        <item name="android:dividerHorizontal">@null</item>
+        <item name="android:minWidth" type="dimen">400dp</item>
+    </style>
+
+    <style name="ButtonStyle.Primary.AlertDialog" >
+        <item name="android:layout_marginLeft">@dimen/gap_small</item>
+        <item name="android:layout_marginRight">@dimen/gap_small</item>
+        <item name="android:maxWidth">150dp</item>
+    </style>
+
+    <style name="ReaderSettingsDialog" parent="BBBBaseDialogTheme">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="ReaderSettingsButton">
+        <item name="android:background">@drawable/btn_rs_background</item>
+        <item name="android:paddingTop">@dimen/gap_small</item>
+        <item name="android:paddingBottom">@dimen/gap_small</item>
+        <item name="android:paddingLeft">@dimen/gap_small</item>
+        <item name="android:paddingRight">@dimen/gap_small</item>
+        <item name="android:minWidth">@dimen/rs_button_width</item>
+    </style>
+
+    <style name="ButtonBar" >
+        <item name="android:paddingLeft">@dimen/gap_medium</item>
+        <item name="android:paddingRight">@dimen/gap_medium</item>
+        <item name="android:background">@color/dialog_background</item>
+        <item name="android:paddingBottom">@dimen/gap_large</item>
+        <item name="android:divider">?android:attr/dividerVertical</item>
+        <item name="android:dividerPadding">0dp</item>
+        <item name="android:showDividers">none</item>
+    </style>
+
+    <style name="DialogAnimationBottom">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_from_bottom</item>
+    </style>
+
+    <style name="DialogAnimationTop">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_top</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_from_top</item>
+    </style>
+
+</resources>
